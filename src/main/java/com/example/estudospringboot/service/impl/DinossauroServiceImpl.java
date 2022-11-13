@@ -53,7 +53,8 @@ public class DinossauroServiceImpl implements DinossauroService {
     }
 
     @Override
-    public void deleteById(String id) {
+    public boolean deleteById(String id) {
         dinossauroRepository.deleteById(id);
+        return true;
     }
 }

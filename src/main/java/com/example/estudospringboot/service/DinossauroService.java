@@ -22,5 +22,5 @@ public interface DinossauroService {
     Dinossauro insert(DinossauroDTO dinossauroDTO);
 
     @NewSpan
-    void deleteById(String id);
+    boolean deleteById(String id);
 }

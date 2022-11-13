@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -44,9 +43,8 @@ public class DinossauroController {
     }
 
     @DeleteMapping(value = "/excluir", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> excluir(@RequestParam(value = "id") String id){
-        dinossauroService.deleteById(id);
-        return ResponseEntity.ok().body("Dinossauro excluído.");
+    public ResponseEntity<Boolean> excluir(@RequestParam(value = "id") String id){
+        return ResponseEntity.ok().body(dinossauroService.deleteById(id));
     }
 
 }
