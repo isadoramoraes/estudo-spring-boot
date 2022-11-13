@@ -1,12 +1,16 @@
 package com.example.estudospringboot.core.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 
+@Builder
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class DinossauroDTO {
 
     @NotNull(message = "O campo nome é obrigatório")
